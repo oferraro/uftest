@@ -13,4 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'RequestsController@fileToJson');
+Route::get('/api/json', 'RequestsController@fileToJson')->name('api.json');
+
+Route::get('/', 'RequestsController@index')->name('home');

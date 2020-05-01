@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 class RequestsController extends Controller
 {
 
+    public function index() {
+        return ('home');
+    }
+
     function fileToJson (Request $urlRequest) {
         $regexpression = '/"([^"]+)"/'; // Regular expression to extract quoted text
         $filePath = getcwd() . '/../storage/epa-http-demo.txt';
@@ -51,7 +55,6 @@ class RequestsController extends Controller
                     'error' => 'error in parameters'
                 ]);
             }
-
 
             for ($i = $offset; $i < ($offset + $limit); $i++) {
                 $limitedResults[] = $results[$i];

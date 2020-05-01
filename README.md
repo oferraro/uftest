@@ -32,7 +32,7 @@ Epa file is downloaded in an async way using a command every 5 minutes.
 It doesn't overlap, if last command is still working it doesn't run again
 
 - Call the API (limit and offset are params and can be ignored)
-    http://localhost:8000/?limit=23&offset=200
+    http://localhost:8000/api/json?limit=5&offset=47743
 
 ----- Commands -----
 - List available artisan commands (Laravel ones, and also the created like epa:get_file) 
